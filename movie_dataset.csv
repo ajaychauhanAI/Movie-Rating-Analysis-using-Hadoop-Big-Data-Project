@@ -1,0 +1,31 @@
+userId,movieId,title,genre,rating,year,watch_time(min),device,location,review_score
+1,101,KGF,Action,5,2018,150,Mobile,India,9
+2,102,RRR,Action,4,2022,180,Laptop,India,8
+3,103,Inception,Sci-Fi,5,2010,148,TV,USA,9
+4,104,Avengers,Action,4,2012,143,Mobile,UK,8
+5,105,Titanic,Romance,5,1997,195,TV,Canada,9
+6,101,KGF,Action,3,2018,150,Laptop,India,7
+7,102,RRR,Action,5,2022,180,TV,India,9
+8,103,Inception,Sci-Fi,4,2010,148,Mobile,USA,8
+9,104,Avengers,Action,5,2012,143,Laptop,UK,9
+10,105,Titanic,Romance,4,1997,195,TV,Canada,8
+11,106,Dangal,Drama,5,2016,161,Mobile,India,9
+12,107,3 Idiots,Comedy,5,2009,170,Laptop,India,10
+13,108,Interstellar,Sci-Fi,4,2014,169,TV,USA,9
+14,109,Bahubali,Action,5,2015,159,Mobile,India,9
+15,110,Sholay,Drama,5,1975,204,TV,India,10
+16,106,Dangal,Drama,4,2016,161,Laptop,India,8
+17,107,3 Idiots,Comedy,5,2009,170,TV,India,10
+18,108,Interstellar,Sci-Fi,5,2014,169,Mobile,USA,10
+19,109,Bahubali,Action,4,2015,159,Laptop,India,8
+20,110,Sholay,Drama,5,1975,204,TV,India,10
+21,101,KGF,Action,4,2018,150,Mobile,India,8
+22,111,Dhurendhar,Action,5,2025,180,TV,India,9
+23,103,Inception,Sci-Fi,5,2010,148,Laptop,USA,9
+24,104,Avengers,Action,4,2012,143,Mobile,UK,8
+25,105,Titanic,Romance,5,1997,195,TV,Canada,9
+26,112,Deewaniyat,Romance,4,2024,160,Mobile,India,8
+27,113,OG,Action,5,2024,170,Laptop,India,9
+28,114,Saaiyara,Drama,4,2024,150,TV,India,8
+29,115,Leo,Action,4,2023,165,Mobile,India,8
+30,116,Salaar,Action,5,2023,175,Laptop,India,9
