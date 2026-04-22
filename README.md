@@ -134,8 +134,8 @@ By combining **HDFS, MapReduce, and Hive**, the system transforms raw movie data
 
 ## 👨‍💻 Author
 
-**Ajay Chauhan**
-🎓 BCA (Data Science & AI)
+**Ajay Chauhan**  
+🎓 BCA (Data Science & AI)  
 🏫 Babu Banarasi Das University
 
 ---
