@@ -95,8 +95,8 @@ The dataset contains movie-related information along with user ratings.
 ### 1️⃣ Upload Dataset to HDFS
 
 ```bash
-hdfs dfs -mkdir /user/cloudera/ajaychaunan/movie
-hdfs dfs -put movie.csv /user/cloudera/ajaychaunan/movie
+hdfs dfs -mkdir /user/cloudera/ajaychauhan/movie
+hdfs dfs -put movie.csv /user/cloudera/ajaychauhan/movie
 ```
 
 ### 2️⃣ Run MapReduce Job
@@ -104,8 +104,8 @@ hdfs dfs -put movie.csv /user/cloudera/ajaychaunan/movie
 ```bash
 hadoop jar hadoop-streaming.jar \
 -files mapper.py,reducer.py \
--input /user/cloudera/ajaychaunan/movie/movie.csv \
--output /user/cloudera/ajaychaunan/movie/output \
+-input /user/cloudera/ajaychauhan/movie/movie.csv \
+-output /user/cloudera/ajaychauhan/movie/output \
 -mapper "python mapper.py" \
 -reducer "python reducer.py"
 ```
@@ -113,7 +113,7 @@ hadoop jar hadoop-streaming.jar \
 ### 3️⃣ View Output
 
 ```bash
-hdfs dfs -cat /user/cloudera/ajaychaunan/movie/output/part-00000
+hdfs dfs -cat /user/cloudera/ajaychauhan/movie/output/part-00000
 ```
 
 ---
@@ -134,7 +134,7 @@ FIELDS TERMINATED BY '\t';
 ### Load Data
 
 ```sql
-LOAD DATA INPATH '/user/cloudera/ajaychaunan/movie/output' INTO TABLE movie_avg;
+LOAD DATA INPATH '/user/cloudera/ajaychauhan/movie/output' INTO TABLE movie_avg;
 ```
 
 ### Queries
