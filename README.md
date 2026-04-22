@@ -32,32 +32,28 @@ This project solves that problem using **distributed computing techniques** to e
 
 ## 🏗️ Architecture
 
-```text
 Raw CSV Dataset
-      ↓
+↓
 HDFS (Storage Layer)
-      ↓
+↓
 MapReduce (Processing Layer)
-      ↓
+↓
 Processed Output (HDFS)
-      ↓
+↓
 Hive (Analysis Layer)
-      ↓
+↓
 Insights (Top Movies)
-```
 
 ---
 
 ## ⚙️ Technologies & Tools Used
 
-| Category      | Tools                        |
-| ------------- | ---------------------------- |
-| Storage       | HDFS                         |
-| Processing    | MapReduce (Hadoop Streaming) |
-| Analysis      | Hive                         |
-| Programming   | Python                       |
-| Platform      | Linux / Cloudera             |
-| AI Assistance | ChatGPT                      |
+* HDFS (Storage Layer)
+* MapReduce (Data Processing)
+* Hive (Data Analysis)
+* Python
+* Linux / Cloudera
+* ChatGPT (Generative AI Assistance)
 
 ---
 
@@ -65,128 +61,66 @@ Insights (Top Movies)
 
 The dataset contains movie-related information along with user ratings.
 
-### 📌 Key Columns:
+### 📌 Key Attributes:
 
-* `userId` – Unique user ID
-* `movieId` – Unique movie ID
-* `title` – Movie name
-* `genre` – Movie category
-* `rating` – User rating (1–5)
-* `year` – Release year
-* `watch_time` – Duration
-* `device` – Viewing device
-* `location` – User location
-* `review_score` – Detailed rating (1–10)
+* userId – Unique user ID
+* movieId – Unique movie ID
+* title – Movie name
+* genre – Movie category
+* rating – User rating (1–5)
+* year – Release year
+* watch_time – Duration
+* device – Viewing device
+* location – User location
+* review_score – Detailed rating (1–10)
 
 ---
 
 ## 🔄 Workflow Explanation
 
-1. Dataset is uploaded to **HDFS**
-2. **Mapper** extracts (movie, rating)
-3. **Reducer** calculates average rating
-4. Output is stored in HDFS
-5. **Hive** is used to query and analyze results
-
----
-
-## 🧪 Implementation Steps
-
-### 1️⃣ Upload Dataset to HDFS
-
-```bash
-hdfs dfs -mkdir /user/cloudera/ajaychauhan/movie
-hdfs dfs -put movie.csv /user/cloudera/ajaychauhan/movie
-```
-
-### 2️⃣ Run MapReduce Job
-
-```bash
-hadoop jar hadoop-streaming.jar \
--files mapper.py,reducer.py \
--input /user/cloudera/ajaychauhan/movie/movie.csv \
--output /user/cloudera/ajaychauhan/movie/output \
--mapper "python mapper.py" \
--reducer "python reducer.py"
-```
-
-### 3️⃣ View Output
-
-```bash
-hdfs dfs -cat /user/cloudera/ajaychauhan/movie/output/part-00000
-```
-
----
-
-## 🧾 Hive Analysis
-
-### Create Table
-
-```sql
-CREATE TABLE movie_avg (
-  movie STRING,
-  avg_rating FLOAT
-)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY '\t';
-```
-
-### Load Data
-
-```sql
-LOAD DATA INPATH '/user/cloudera/ajaychauhan/movie/output' INTO TABLE movie_avg;
-```
-
-### Queries
-
-```sql
-SELECT * FROM movie_avg;
-
-SELECT * FROM movie_avg
-ORDER BY avg_rating DESC;
-
-SELECT * FROM movie_avg
-ORDER BY avg_rating DESC
-LIMIT 5;
-```
+* The dataset is stored in HDFS for distributed storage
+* MapReduce processes the data to calculate average ratings
+* Processed data is stored back in HDFS
+* Hive is used to analyze and query the results
+* Final insights such as top-rated movies are generated
 
 ---
 
 ## 📈 Output
 
 * Average rating of each movie
-* Sorted list of top-rated movies
-* Top 5 movies identified
+* Identification of top-performing movies
+* Structured insights from raw data
 
 ---
 
 ## 🤖 Use of Generative AI
 
-Generative AI played a key role in this project:
+Generative AI played an important role in this project:
 
-* ✔ Code generation (Mapper & Reducer)
-* ✔ Debugging assistance
-* ✔ Hive query creation
-* ✔ Concept understanding (HDFS, MapReduce, Hive)
+* Code generation (Mapper & Reducer)
+* Debugging support
+* Hive query assistance
+* Concept understanding of Big Data tools
 
 ---
 
 ## 🔐 Validation
 
-All AI-generated code was:
+All generated code and outputs were:
 
-* Tested manually
+* Manually tested
 * Verified for correctness
-* Executed successfully in Hadoop environment
+* Successfully executed in the Hadoop environment
 
 ---
 
 ## 🌟 Key Features
 
-* Scalable data processing
+* Scalable Big Data processing
 * Efficient handling of large datasets
-* SQL-like analysis using Hive
-* Integration of AI for faster development
+* Distributed computing approach
+* Integration of AI for enhanced productivity
 
 ---
 
@@ -200,8 +134,8 @@ By combining **HDFS, MapReduce, and Hive**, the system transforms raw movie data
 
 ## 👨‍💻 Author
 
-**Ajay Chauhan**  
-🎓 BCA (Data Science & AI)  
+**Ajay Chauhan**
+🎓 BCA (Data Science & AI)
 🏫 Babu Banarasi Das University
 
 ---
